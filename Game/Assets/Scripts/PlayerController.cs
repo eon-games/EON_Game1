@@ -13,11 +13,19 @@ public class PlayerController : MonoBehaviour
     }
     void FixedUpdate()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
+       float moveHorizontal = Input.GetAxis("Horizontal");
 
-        Vector3 movement = new Vector3(0, moveVertical, moveHorizontal*speed);
+        Vector3 movement = new Vector3(0, 0, moveHorizontal);
 
         transform.position += transform.TransformDirection(movement);
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            rb.AddForce(0, 0, 2, ForceMode.Impulse);
+
+        }
     }
 }
