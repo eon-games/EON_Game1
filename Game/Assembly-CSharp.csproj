@@ -60,8 +60,39 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <None Include="Assets\ToonSoldiers_WW2_demo\ToonSoldiers_WW2_demo_README.txt" />
+    <Reference Include="Unity.Timeline.Editor">
+      <HintPath>C:/Users/Marc/Documents/GitHub/EON_Project/Game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VSCode.Editor">
+      <HintPath>C:/Users/Marc/Documents/GitHub/EON_Project/Game/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro.Editor">
+      <HintPath>C:/Users/Marc/Documents/GitHub/EON_Project/Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ugui">
+      <HintPath>C:/Users/Marc/Documents/GitHub/EON_Project/Game/Library/ScriptAssemblies/Unity.ugui.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+      <HintPath>C:/Users/Marc/Documents/GitHub/EON_Project/Game/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.CollabProxy.Editor">
+      <HintPath>C:/Users/Marc/Documents/GitHub/EON_Project/Game/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Rider.Editor">
+      <HintPath>C:/Users/Marc/Documents/GitHub/EON_Project/Game/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualStudio.Editor">
+      <HintPath>C:/Users/Marc/Documents/GitHub/EON_Project/Game/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>C:/Users/Marc/Documents/GitHub/EON_Project/Game/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ugui.Editor">
+      <HintPath>C:/Users/Marc/Documents/GitHub/EON_Project/Game/Library/ScriptAssemblies/Unity.ugui.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0a5/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
     </Reference>
@@ -581,48 +612,6 @@
     <Reference Include="System.Xml.Serialization">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0a5/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Unity.Timeline.Editor.csproj">
-      <Project>{5915FC3F-6E77-4193-8B3D-443BBB8717B0}</Project>
-      <Name>Unity.Timeline.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VSCode.Editor.csproj">
-      <Project>{F2FA6359-7D81-2785-E899-DC738B0BCDBC}</Project>
-      <Name>Unity.VSCode.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
-      <Project>{84E3DEBF-A955-DA74-DE13-C4861FEE2C61}</Project>
-      <Name>Unity.TextMeshPro.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.ugui.csproj">
-      <Project>{6337EB1F-55B2-86D4-099D-CE57563BE95C}</Project>
-      <Name>Unity.ugui</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Timeline.csproj">
-      <Project>{4542AE01-05D2-F1EB-4DFE-A328E69A0DDC}</Project>
-      <Name>Unity.Timeline</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.CollabProxy.Editor.csproj">
-      <Project>{8CF2C73D-D45F-0EFE-C968-1ECD6036A545}</Project>
-      <Name>Unity.CollabProxy.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Rider.Editor.csproj">
-      <Project>{4E47F96F-8A24-9FF2-8BA6-C1C20E23B7E4}</Project>
-      <Name>Unity.Rider.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
-      <Project>{745B00AA-80EF-CAFC-1A4D-CDA382C6C3E7}</Project>
-      <Name>Unity.VisualStudio.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.csproj">
-      <Project>{6937D9FB-8FCD-C0F6-BE4F-4A48C1459CBD}</Project>
-      <Name>Unity.TextMeshPro</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.ugui.Editor.csproj">
-      <Project>{9211D990-1F84-4612-B62F-DCB77EFD8A4F}</Project>
-      <Name>Unity.ugui.Editor</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

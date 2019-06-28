@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody rb;
     public float speed = 2;
+    public float jumpForce = 1;
+    private bool isFalling = false;
 
     void Start()
     {
@@ -15,17 +17,18 @@ public class PlayerController : MonoBehaviour
     {
        float moveHorizontal = Input.GetAxis("Horizontal");
 
-        Vector3 movement = new Vector3(0, 0, moveHorizontal);
+       transform.position += transform.TransformDirection(moveHorizontal * speed, 0, 0);
 
-        transform.position += transform.TransformDirection(movement);
-    }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.UpArrow)&&(isFalling == false))
         {
-            rb.AddForce(0, 0, 2, ForceMode.Impulse);
-
+            Vector3 jump = new Vector3(0, 10*jumpForce, 0);
+            rb.AddForce(jump);
+            isFalling = true;
         }
+    }
+    void OnCollisionStay()
+    {
+        isFalling = false;
     }
 }
