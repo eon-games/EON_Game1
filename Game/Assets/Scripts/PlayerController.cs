@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 2;
     public float jumpForce = 1;
     private bool isFalling = false;
+    private int jumpDirection = 1;
 
     void Start()
     {
@@ -16,10 +17,9 @@ public class PlayerController : MonoBehaviour
     }
     void FixedUpdate()
     {
-       float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveHorizontal = Input.GetAxis("Horizontal");
 
-       transform.position += transform.TransformDirection(moveHorizontal * speed, 0, 0);
-
+        transform.position += transform.TransformDirection(moveHorizontal * speed, 0, 0);
 
         if (((Input.GetKey(KeyCode.UpArrow)||(Input.GetKey(KeyCode.W)))&&(isFalling == false)))
         {
@@ -28,8 +28,12 @@ public class PlayerController : MonoBehaviour
             isFalling = true;
         }
     }
-    void OnCollisionStay()
+    void OnCollisionEnter(Collision col)
     {
-        isFalling = false;
+        if (col.gameObject.tag == "Floor")
+        {
+            isFalling = false;
+        }
+
     }
 }

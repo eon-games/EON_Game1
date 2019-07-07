@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\EnemyController.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\RaycastShot.cs" />
+     <Compile Include="Assets\Scripts\Target.cs" />
      <None Include="Assets\ToonSoldiers_WW2_demo\ToonSoldiers_WW2_demo_README.txt" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>D:/Usuarios/Pablo/Documentos/GitHub/EON_Project/Game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
