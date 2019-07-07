@@ -8,7 +8,10 @@ public class EnemyController : MonoBehaviour
     private Transform[] waypoints;
 
     [SerializeField]
+    public Transform Player;
     private float moveSpeed = 2f;
+    float maxDist = 8;
+    float minDist = 2;
 
     private int waypointIndex = 0;
     
@@ -21,7 +24,8 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
+        //Move();
+        ChasePlayer();
         if(waypointIndex == waypoints.Length)
         {
             waypointIndex = 0;
@@ -41,5 +45,16 @@ public class EnemyController : MonoBehaviour
                 waypointIndex += 1;
             }
         }
+    }
+    private void ChasePlayer()
+    {
+        float distance = Vector3.Distance (Player.transform.position, transform.position);
+        if(distance >= minDist )
+        {
+            transform.position = Vector3.MoveTowards(transform.position,
+            Player.transform.position,
+            moveSpeed*Time.deltaTime);
+        }
+        
     }
 }
