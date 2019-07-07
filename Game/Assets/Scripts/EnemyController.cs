@@ -25,14 +25,27 @@ public class EnemyController : MonoBehaviour
     void Update()
     {
         //Move();
-        ChasePlayer();
+        //ChasePlayer();
+
+        float distance = Vector3.Distance (transform.position, Player.transform.position);
+        if(distance >= maxDist)
+        {
+            Patrol();
+        }else if(distance > minDist && distance < maxDist)
+        {
+            ChasePlayer();
+        }else if(distance <= minDist)
+        {
+            //Stop and attack
+        }
+
         if(waypointIndex == waypoints.Length)
         {
             waypointIndex = 0;
         }
     }
 
-    private void Move()
+    private void Patrol()
     {
         if(waypointIndex <= waypoints.Length - 1)
         {
@@ -47,14 +60,9 @@ public class EnemyController : MonoBehaviour
         }
     }
     private void ChasePlayer()
-    {
-        float distance = Vector3.Distance (Player.transform.position, transform.position);
-        if(distance >= minDist )
-        {
-            transform.position = Vector3.MoveTowards(transform.position,
-            Player.transform.position,
-            moveSpeed*Time.deltaTime);
-        }
-        
+    {        
+        transform.position = Vector3.MoveTowards(transform.position,
+        Player.transform.position,
+        moveSpeed*Time.deltaTime);       
     }
 }
